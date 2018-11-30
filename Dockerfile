@@ -7,4 +7,4 @@ RUN cd /tmp &&\
   cd mysql-connector-java-5.1.47 &&\
   cp mysql-connector-java-5.1.47.jar /opt/atlassian/confluence/confluence/WEB-INF/lib/
   cd /tmp &&\
-  rf -rf /tmp/mysql-connector-java-5.1.47 mysql-connector-java-5.1.47.tar.gz &&\
+  rf -rf /tmp/mysql-connector-java-5.1.47 mysql-connector-java-5.1.47.tar.gz
