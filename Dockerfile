@@ -1,6 +1,7 @@
 FROM atlassian/confluence-server
 MAINTAINER Christoph Eßer <christoph@cehser.de>
 
+RUN apt-get install wget
 RUN cd /tmp &&\
   wget https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.47.tar.gz  &&\
   tar zxvf mysql-connector-java-5.1.47.tar.gz &&\
