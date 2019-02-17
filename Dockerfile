@@ -16,15 +16,15 @@ EXPOSE 8090
 EXPOSE 8091
 
 CMD ["/entrypoint.sh", "-fg"]
-ENTRYPOINT ["/tini", "--"]
+ENTRYPOINT ["/sbin/tini", "--"]
 
 RUN apt-get update \
   && apt-get install -y --no-install-recommends fontconfig \
   && apt-get clean autoclean && apt-get autoremove -y && rm -rf /var/lib/apt/lists/*
 
 ARG TINI_VERSION=v0.18.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
-RUN chmod +x /tini
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /sbin/tini
+RUN chmod +x /sbin/tini
 
 COPY entrypoint.sh                    /entrypoint.sh
 
