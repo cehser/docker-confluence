@@ -24,7 +24,7 @@ RUN apt-get update \
 
 ARG TINI_VERSION=v0.18.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /sbin/tini
-RUN chmod +x /tini
+RUN chmod +x /sbin/tini
 
 COPY entrypoint.sh              			/entrypoint.sh
 
