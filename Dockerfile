@@ -39,7 +39,7 @@ RUN mkdir -p                             	${CONFLUENCE_INSTALL_DIR} \
     && sed -i -e 's/Context path=""/Context path="${catalinaContextPath}"/' ${CONFLUENCE_INSTALL_DIR}/conf/server.xml
 
 # Add MySQL Connector
-ARG CONNECTOR_VERSION=8.0.16
+ARG CONNECTOR_VERSION=5.1.47
 ADD https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-${CONNECTOR_VERSION}.tar.gz /tmp/
 RUN cd /tmp &&\
   tar zxvf mysql-connector-java-${CONNECTOR_VERSION}.tar.gz &&\
